@@ -1,0 +1,64 @@
+local player = game.Players.LocalPlayer
+local playerData = player:WaitForChild("PlayerData")
+
+print("Made by bludrseeckr :) Freddy Fazblox's Pizza Roleplay. What this does::\n\n-All Characters Unlocked.\n-All Skins Unlocked.\n-Tickets Changed To 100000.\n-Tokens Changed to 100000.\n\nTy Ily <3 <3 :) :) - bludrseeckr - bludrseeckr")
+
+-- Function to set the value of a BoolValue to true
+local function setBoolValue(parent, name)
+    local boolValue = parent:FindFirstChild(name)
+    if boolValue then
+        boolValue.Value = true
+    end
+end
+
+-- Check and set BoolValues for Freddy
+setBoolValue(playerData, "FreddyPurchased")
+local freddy = playerData:FindFirstChild("FreddyPurchased")
+if freddy then
+    setBoolValue(freddy, "Skin1")
+    setBoolValue(freddy, "Skin2")
+end
+
+-- Check and set BoolValues for Bonnie
+setBoolValue(playerData, "BonniePurchased")
+local bonnie = playerData:FindFirstChild("BonniePurchased")
+if bonnie then
+    setBoolValue(bonnie, "Skin1")
+    setBoolValue(bonnie, "Skin2")
+end
+
+-- Check and set BoolValues for Chica
+setBoolValue(playerData, "ChicaPurchased")
+local chica = playerData:FindFirstChild("ChicaPurchased")
+if chica then
+    setBoolValue(chica, "Skin1")
+end
+
+-- Check and set BoolValues for Foxy
+setBoolValue(playerData, "FoxyPurchased")
+local foxy = playerData:FindFirstChild("FoxyPurchased")
+if foxy then
+    setBoolValue(foxy, "Skin1")
+    setBoolValue(foxy, "Skin2")
+end
+
+-- Check and set BoolValues for Golden Freddy
+setBoolValue(playerData, "GFreddyPurchased")
+local gfreddy = playerData:FindFirstChild("GFreddyPurchased")
+if gfreddy then
+    setBoolValue(gfreddy, "Skin1")
+end
+
+-- Set NumberValues for Tokens and Tickets
+local tokens = playerData:FindFirstChild("Tokens")
+if tokens then
+    tokens.Value = 100000
+end
+
+local tickets = playerData:FindFirstChild("Tickets")
+if tickets then
+    tickets.Value = 100000
+end
+
+-- Set BoolValue for FFEventCompleted
+setBoolValue(playerData, "FFEventCompleted")
